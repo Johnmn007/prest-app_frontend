@@ -11,24 +11,12 @@
 
 import axios from 'axios';
 
-/**
- * Cliente de Axios centralizado.
- * Importante: En Vite, las variables de entorno deben empezar con VITE_
- * para ser accesibles en el cliente.
- */
 const apiClient = axios.create({
-    // Usamos directamente la variable de entorno configurada en Vercel.
-    // Eliminamos el respaldo de localhost para forzar el uso de HTTPS en producción.
-    baseURL: import.meta.env.VITE_API_URL,
+    // Forzamos la URL con HTTPS directamente aquí para probar
+    baseURL: 'https://prest-appbackend-production.up.railway.app', 
     headers: {
         'Content-Type': 'application/json',
     },
-});
-
-// Opcional: Interceptor para debugging (puedes borrarlo si prefieres)
-apiClient.interceptors.request.use((config) => {
-    console.log(`Petición enviada a: ${config.baseURL}${config.url}`);
-    return config;
 });
 
 export default apiClient;
