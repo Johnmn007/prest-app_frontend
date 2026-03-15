@@ -12,7 +12,7 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://*.railway.app https://prest-appbackend-production.up.railway.app;"
+          "value": "upgrade-insecure-requests; default-src 'self'; script-src 'self' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://*.railway.app https://prest-appbackend-production.up.railway.app https://vercel.live;"
         }
       ]
     },
