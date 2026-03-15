@@ -5,7 +5,7 @@ export const getLoans = async ({ search = '', status = '', skip = 0, limit = 100
     if (search) params.append('search', search);
     if (status) params.append('status', status);
 
-    const { data } = await apiClient.get(`/loans/?${params.toString()}`);
+    const { data } = await apiClient.get(`/loans?${params.toString()}`);
     return data;
 };
 
